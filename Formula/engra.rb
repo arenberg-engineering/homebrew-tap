@@ -17,23 +17,23 @@ class Engra < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.10/engra-0.4.10-macos-arm64.tar.gz"
-      sha256 "3b523446f8cc816dc526eb2922ff4725f75a31ae03b9715844518dfdf07b6051"
+      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.11/engra-0.4.11-macos-arm64.tar.gz"
+      sha256 "0fcf722d0764d64631e9dba7c5d806b74dc1744abdd09a89c0e1488631ee7f7f"
     end
     on_intel do
-      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.10/engra-0.4.10-macos-x64.tar.gz"
-      sha256 "47dab054a3f138131600078af816a9de46f2bbe8184554ebfd2694534977ac6f"
+      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.11/engra-0.4.11-macos-x64.tar.gz"
+      sha256 "3123ef351fdc842497201ffc35ad06efaae29f952909dd4509d83a4aac8e44f5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.10/engra-0.4.10-linux-arm64.tar.gz"
-      sha256 "95d4610c7b6f37e5574fbd083d34ab01e409fa85b77797a7c828baf29094111c"
+      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.11/engra-0.4.11-linux-arm64.tar.gz"
+      sha256 "2ac681d09f5469498a12ca06ff20b162144618760bf7bf6fc0b8c18666affc71"
     end
     on_intel do
-      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.10/engra-0.4.10-linux-x64.tar.gz"
-      sha256 "c3a2abcc67b16ddbc07c344e413f4ea33c00e1b6457ac382cd1877a78acdc3e3"
+      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.11/engra-0.4.11-linux-x64.tar.gz"
+      sha256 "ea259f5961f14adbee82e578a65846dc783b5057719c8baaad264ebb6fe124c1"
     end
   end
 
