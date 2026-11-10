@@ -18,7 +18,7 @@ class Engra < Formula
   on_macos do
     on_arm do
       url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.26/engra-0.4.26-macos-arm64.tar.gz"
-      sha256 "0d2b66f671d370fad4eaed6789a962308a52861beff560eba695db8af977847a"
+      sha256 "89e0e892727c8be0971593f8b9d86f93e21b9f2044780572f71eb562a2a2fd5d"
     end
     on_intel do
       url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.26/engra-0.4.26-macos-x64.tar.gz"
