@@ -17,29 +17,33 @@ class Engra < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.72/engra-0.4.72-macos-arm64.tar.gz"
-      sha256 "315ba5abc0382bdb0319828c929fdbc9ee9ad11ea6024562e1423f4cd8ebe276"
+      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.73/engra-0.4.73-macos-arm64.tar.gz"
+      sha256 "a087b883c5526656509edb4c35c5e55fb861dc6e99dd573008aa75a3a2fa6f04"
     end
     on_intel do
-      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.72/engra-0.4.72-macos-x64.tar.gz"
-      sha256 "e3dbc57e1cc4d2aa5d72f46c988af6fa4d36bcfbee83fde433c5b6908994b35a"
+      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.73/engra-0.4.73-macos-x64.tar.gz"
+      sha256 "1702688a0d3df89a5d440a149331b6383d4c83faa6c1fb053e8f936938a5d693"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.72/engra-0.4.72-linux-arm64.tar.gz"
-      sha256 "3213e889321673388bb519e497de2aa72a02e8e95d833c7186e73b009ee60c83"
+      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.73/engra-0.4.73-linux-arm64.tar.gz"
+      sha256 "9ef0dbbf155c47235d00619b8c0dee4a4a9e6a60b81d62a0dd05ab50cdbf5f63"
     end
     on_intel do
-      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.72/engra-0.4.72-linux-x64.tar.gz"
-      sha256 "c2a7681f6551bc897444844fde4b5276703ec66905ef4df6af8ec057bd0d822d"
+      url "https://github.com/arenberg-engineering/engra-releases/releases/download/v0.4.73/engra-0.4.73-linux-x64.tar.gz"
+      sha256 "1a130d390d95de00b32dbb2efea43eccf762c7796dca59cb1d770b3c9048701f"
     end
   end
 
   def install
     libexec.install "engra", "_internal"
-    bin.install_symlink libexec/"engra"
+    if (libexec/"_internal/engra-shim").exist?
+      bin.install_symlink libexec/"_internal/engra-shim" => "engra"
+    else
+      bin.install_symlink libexec/"engra"
+    end
     prefix.install "LICENSE.txt", "TERMS.md", "THIRD_PARTY_NOTICES.txt"
   end
 
